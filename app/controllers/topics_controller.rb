@@ -1,4 +1,5 @@
 class TopicsController < ApplicationController
+  before_action :authenticate_user!
   def confirm
     @topic = Topic.new(topics_params)
     render :new if @topic.invalid?
@@ -39,17 +40,19 @@ class TopicsController < ApplicationController
   def destroy
     @topic = Topic.find(params[:id])
     @topic.destroy
-    redirect_to topics_path, notice: "ブログを削除しました！"
+    redirect_to topics_path, notice: "トピックを削除しました！"
   end
 
   def create
-    @topic = Topic.new(topics_params)
-    if @topic.save
-      redirect_to topics_path, notice: "ブログを作成しました！"
+    @blog = Blog.new(blogs_params)
+    @blog.user_id = current_user.id
+    if @blog.save
+      redirect_to blogs_path, notice: "ブログを作成しました！"
+      NoticeMailer.sendmail_blog(@blog).deliver
     else
       render  'new'
     end
-  end
+   end
 
   private
     def topics_params
