@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
     @topic = Topic.new(topics_params)
     render :new if @topic.invalid?
   end
-  
+
   def index
     @topics = Topic.all
   end
@@ -31,7 +31,7 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
     if @topic.update(topics_params)
-      redirect_to topics_path, notice: "ブログを更新しました！"
+      redirect_to topics_path, notice: "トピックを更新しました！"
     else
       render 'edit'
     end
@@ -47,8 +47,8 @@ class TopicsController < ApplicationController
     @blog = Blog.new(blogs_params)
     @blog.user_id = current_user.id
     if @blog.save
-      redirect_to blogs_path, notice: "ブログを作成しました！"
-      NoticeMailer.sendmail_blog(@blog).deliver
+      redirect_to blogs_path, notice: "トピックを作成しました！"
+      NoticeMailer.sendmail_topic(@topic).deliver
     else
       render  'new'
     end
