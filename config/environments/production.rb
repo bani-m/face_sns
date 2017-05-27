@@ -1,17 +1,18 @@
-ActionMailer::Base.smtp_settings =
-{
- user_name: ENV['SENDGRID_USERNAME'],
- password: ENV['SENDGRID_PASSWORD'],
- domain: "heroku.com",
- address: "smtp.sendgrid.net",
- port: 587,
- authentication: :plain,
- enable_starttls_auto: true
-}
-
-config.assets.compile = true
+#
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.default_url_options = { host: 'radiant-atoll-97370' }
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings =
+  {
+  user_name: ENV['SENDGRID_USERNAME'],
+  password: ENV['SENDGRID_PASSWORD'],
+  domain: "heroku.com",
+  address: "smtp.sendgrid.net",
+  port: 587,
+  authentication: :plain,
+  enable_starttls_auto: true
+  }
+# Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -21,7 +22,6 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -75,7 +75,6 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
@@ -87,6 +86,5 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
-  
+  #config.active_record.dump_schema_after_migration = false
 end
