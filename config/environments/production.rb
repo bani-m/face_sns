@@ -1,5 +1,3 @@
-config.action_mailer.default_url_options = { host: 'radiant-atoll-97370' }
-ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings =
 {
  user_name: ENV['SENDGRID_USERNAME'],
