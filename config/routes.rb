@@ -1,22 +1,50 @@
 Rails.application.routes.draw do
-  root to: "top#index"
-  devise_for :users, controllers: {
-    registrations: "users/registrations",
-    omniauth_callbacks: "users/omniauth_callbacks"
-}
-  
+resources :topics, only: [:index, :new, :create]
+
+  get 'notifications/index'
+
   if Rails.env.development?
   mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
-  resources :topics, only: [:index, :new, :create, :edit, :update ,:destroy] do
-    collection do
-      post :confirm
-    end
+  resources :topics do
+  resources :comments
+  collection do
+    post :confirm
   end
-  
-  
+  end
 
+  resources :conversations do
+  resources :messages
+  end
+
+  devise_for :users, controllers: {
+  registrations: "users/registrations",
+  omniauth_callbacks: "users/omniauth_callbacks"
+  }
+
+resources :relationships, only: [:create, :destroy]
+
+resources :users, only: [:index, :show]
+root 'top#index'
+resources :topics do
+resources :comments
+
+collection do
+post :confirm
+end
+end
+
+  
+mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+
+
+
+
+
+
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -71,4 +99,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end

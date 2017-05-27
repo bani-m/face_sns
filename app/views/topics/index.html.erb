@@ -1,64 +1,18 @@
-<head>
-  <meta charset="UTF-8">
-  <title>FACE SNS</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<header>
-  <ul>
-    <li><a href="#">FACE SNS</a></li>
-    <li><a href="#">トップページ</a></li>
-    <li><a href="#">トピック</a></li>
-  </ul>
-</header>
-<section class="main-header">
-  </section>
-<section class="about">
-  <h1>About FACE SNS</h1>
-  <p>
-     FACE SNSは友達とのコミュニケーションを活発にするために作られたアプリです
-     <br>
-     このアプリを使用する事でさまざま情報を発信して行きましょう！！！！！
-  </p>
-  <p>
-     悲しんだり、落ち込んだり、喜んだり、バカ騒ぎしたり、そんな様子を共有しよう<br>
-     遠距離の友達が気になる方には是非このアプリをオススメしよう！！！
-  </p>
-</section>
-<p><%= notice %></p>
-
-<h1>トピック一覧</h1>
-
-<% @topics.each do |topic| %>
-  <p>タイトル:<%= topic.title %></p>
-  <p>本文:<%= topic.content %></p>
-  <%= link_to "トピックを編集する", edit_topic_path(topic.id) %>
-  <%= link_to "トピックを削除する", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
-<% end %>
-
-<%= link_to "トピックを作成する", new_topic_path,class: "btn btn-default btn-xs" %>
-<section class="function">
-  <h1>Function</h1>
-    <div class="function-images">
-      <div class="function-image">
-        <img src="images-master/key.png">
-        <p>ログイン機能</p>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h1>トピック一覧</h1>
+    <%= link_to "トピックを作成する", new_topic_path, class: 'btn btn-default' %>
+    <% @topicss.each do |topic| %>
+      <div class="row">
+        # ブログのタイトルにlink_toでリンクを設定します。
+        <%= link_to topic_path(blog) do %>
+          <h4><strong><%= topic.title %></strong></h4>
+        <% end %>
+        <p><%= topic.content %></p>
+        <%= link_to "編集", edit_topic_path(topic.id), class: 'btn btn-default btn-sm btn-success' %>
+        <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
       </div>
-      <div class="function-image">
-        <img src="images-master/mails.png">
-        <p>メール送信機能</p>
-      </div>
-      <div class="function-image">
-        <img src="images-master/girls.png">
-        <p>友達つながり機能</p>
-      </div>
-      <div class="function-image">
-        <img src="images-master/comment.png">
-        <p>コメント投稿機能</p>
-      </div>
-    </div>
-</section>
-<footer>
-  <p>運営会社DIVE INTO CODE株式会社</p>
-  <p>© 2015-2016 Copyright DIVE INTO CODE Corp.</p>
-</footer>
+    <% end %>
+  </div>
+</div>

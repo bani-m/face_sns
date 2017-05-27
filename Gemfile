@@ -60,6 +60,7 @@ group :production, :staging do
   gem 'dotenv-rails'
   gem 'unicorn'
   gem 'rails_12factor'
+  gem 'omniauth-twitter'
 end
 gem 'devise'
 gem 'therubyracer', platforms: :ruby
@@ -86,4 +87,8 @@ gem 'unicorn', group: :production
 group :development do
   gem 'letter_opener_web'
   gem 'dotenv-rails'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
