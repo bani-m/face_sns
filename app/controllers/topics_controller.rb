@@ -72,5 +72,6 @@ end
     def topics_params
       params.require(:topic).permit(:title, :content)
     end
-  end# idをキーとして値を取得するメソッド
+  end
     
+end
