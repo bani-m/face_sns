@@ -64,8 +64,7 @@ class TopicsController < ApplicationController
     def topics_params
       params.require(:topic).permit(:title, :content, :user_id, :name)
     end
-   # idをキーとして値を取得するメソッド
+end   # idをキーとして値を取得するメソッド
     def set_topic
       @topic = Topic.find(params[:id])
     end
-end
