@@ -14,6 +14,12 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+  @comment = Comment.find(params[:id])
+  @comment .destroy
+   flash[:notice] = "Successfully Deleted"
+  end
+
   private
     # ストロングパラメーター
     def comment_params
