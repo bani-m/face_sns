@@ -6,7 +6,10 @@ class TopicsController < ApplicationController
   end
 
   def index
-    @topics = Topic.all
+  @topics = Topic.all
+  respond_to do |format|
+    format.html
+    format.js
   end
 
   def show
