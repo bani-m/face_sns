@@ -53,7 +53,7 @@ class TopicsController < ApplicationController
       redirect_to topics_path, notice: "ブログを作成しました！"
       NoticeMailer.sendmail_topic(@topic).deliver
     else
-      render  'new'
+      render 'new'
     end
    end
 
