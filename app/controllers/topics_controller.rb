@@ -68,4 +68,3 @@ class TopicsController < ApplicationController
     def set_topic
       @topic = Topic.find(params[:id])
     end
-end
