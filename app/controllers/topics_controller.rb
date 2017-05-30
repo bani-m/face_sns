@@ -68,3 +68,4 @@ end   # idをキーとして値を取得するメソッド
     def set_topic
       @topic = Topic.find(params[:id])
     end
+end
