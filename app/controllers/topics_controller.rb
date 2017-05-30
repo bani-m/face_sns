@@ -73,4 +73,3 @@ end
       params.require(:topic).permit(:title, :content)
     end
     
-end
