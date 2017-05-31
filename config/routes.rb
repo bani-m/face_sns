@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  get 'relationships/create'
+
+  get 'relationships/destroy'
+
 resources :topics, only: [:index, :new, :create]
 
   get 'notifications/index'
