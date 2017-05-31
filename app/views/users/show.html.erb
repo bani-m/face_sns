@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <h2><%= @user.email %>がフォローしているユーザー一覧</h2>
+    <% @user.followed_users.each do |user| %>
+    <%= render partial: 'followed_index', locals: { user: user } %>
+    <% end %>
+    </div>
+  <div class="row">
+    <h2><%= @user.email %>のフォロワー一覧</h2>
+    <% @user.followers.each do |user| %>
+    <%= render partial: 'follower_index', locals: { user: user } %>
+    <% end %>
+   </div>
+</div>
