@@ -60,7 +60,6 @@ group :production, :staging do
   gem 'dotenv-rails'
   gem 'unicorn'
   gem 'rails_12factor'
-  gem 'omniauth-twitter'
 end
 gem 'devise'
 gem 'therubyracer', platforms: :ruby
@@ -88,19 +87,3 @@ group :development do
   gem 'letter_opener_web'
   gem 'dotenv-rails'
 end
-
-group :production do
-  gem 'rails_12factor'
-end
-
-gem 'carrierwave'
-gem 'rmagick'
-gem 'fog'
-gem 'dotenv-rails'
-gem 'unicorn'
-gem 'capistrano', '3.6.0'
-gem 'capistrano-bundler'
-gem 'capistrano-rails'
-gem 'capistrano-rbenv'
-gem 'capistrano3-unicorn'
-gem 'therubyracer', platforms: :ruby
