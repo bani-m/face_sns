@@ -22,15 +22,16 @@ default: &default
   pool: 5
   template: template0
 
+
 development:
   <<: *default
-  database: face_sns_development
+  database: achieve_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: face_sns
+  #username: achieve
 
   # The password associated with the postgres role (username).
   #password:
@@ -58,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: face_sns_test
+  database: achieve_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -79,32 +80,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-
-  #min_messages: notice
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
+production:
   <<: *default
-  database: face_sns_test
-
-# As with config/secrets.yml, you never want to store sensitive information,
-# like your database password, in your source code. If your source code is
-# ever seen by anyone, they now have access to your database.
-#
-# Instead, provide the password as a unix environment variable when you boot
-# the app. Read http://guides.rubyonrails.org/configuring.html#configuring-a-database
-# for a full rundown on how to provide these environment variables in a
-# production deployment.
-#
-# On Heroku and other platform providers, you may have a full connection URL
-# available as an environment variable. For example:
-#
-#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
-#
-# You can use this database configuration with:
-#
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
+  database: achieve_production
+  username: achieve
+  password: <%= ENV['ACHIEVE_DATABASE_PASSWORD'] %>
