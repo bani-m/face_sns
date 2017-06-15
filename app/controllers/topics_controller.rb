@@ -34,7 +34,7 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
     if @topic.update(topics_params)
-      redirect_to topics_path, notice: "ブログを更新しました！"
+      redirect_to topics_path, notice: "トピックを更新しました！"
     else
       render 'edit'
     end
@@ -43,13 +43,13 @@ class TopicsController < ApplicationController
   def destroy
     @topic = Topic.find(params[:id])
     @topic.destroy
-    redirect_to topics_path, notice: "ブログを削除しました！"
+    redirect_to topics_path, notice: "トピックを削除しました！"
    end
 
   def create
     @topic = Topic.new(topics_params)
     if @topic.save
-      redirect_to topics_path, notice: "ブログを作成しました！"
+      redirect_to topics_path, notice: "トピックを作成しました！"
       NoticeMailer.sendmail_topic(@topic).deliver
     else
       render 'new'
