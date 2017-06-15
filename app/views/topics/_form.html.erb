@@ -1,5 +1,5 @@
 <%= form_for(@topic) do |f| %>
-  <% if @blog.errors.any? %>
+  <% if @topic.errors.any? %>
     <div id="error_explanation">
       <h2><%= @topic.errors.count %>件のエラーがあります。</h2>
 
@@ -20,4 +20,4 @@
   <%= f.submit %>
 <% end %>
 
-<%= link_to "ブログ一覧画面にもどる", topics_path %>
+<%= link_to "トピック一覧画面にもどる", topics_path %>
