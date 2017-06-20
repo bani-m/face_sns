@@ -11,7 +11,7 @@ end
 
 100.times do |t|
   title = Faker::Book.title
-  content = Faker::Coffee.blend_name
+  content = Faker::Beer.name
   Topic.create!(title: title,
                content: content,
                )
