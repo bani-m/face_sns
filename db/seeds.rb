@@ -20,9 +20,7 @@
 
 100.times do |p|
   comment = Faker::LordOfTheRings.character
-  Comment.create!(user_id: user_id,
-                  topic_id: topic_id,
-                  content: content,
+  Comment.create!(content: content,
                   )
 end
 #t.integer  "user_id"
