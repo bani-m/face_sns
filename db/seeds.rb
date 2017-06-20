@@ -17,3 +17,10 @@ end
                )
 
 end
+
+100.times do |p|
+  comment = Faker::LordOfTheRings.character
+  comment.create!(comment: comment,
+               )
+
+end
