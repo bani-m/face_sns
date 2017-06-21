@@ -19,7 +19,7 @@
 #end
 
 100.times do |p|
-  content = Faker::LordOfTheRings.character
+  content = Faker::Bank.name
   Comment.create!(content: content,
                   )
 end
