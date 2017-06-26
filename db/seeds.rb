@@ -5,7 +5,7 @@
                password: password,
                password_confirmation: password,
                uid: n,
-               provider: n,
+               provider: s,
                )
 end
 
