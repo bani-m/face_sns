@@ -83,5 +83,5 @@ test:
 production:
   <<: *default
   database: face_production
-  #username: face
-  #password: <%= ENV['FACE_DATABASE_PASSWORD'] %>
+  username: jyunia
+  password: <%= ENV['FACE_DATABASE_PASSWORD'] %>
