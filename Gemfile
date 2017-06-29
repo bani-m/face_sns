@@ -50,6 +50,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
+  gem 'capistrano-rails-console'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
@@ -63,14 +64,6 @@ group :production, :staging do
 end
 gem 'devise'
 gem 'therubyracer', platforms: :ruby
-group :development, :test do
-  gem 'capistrano', '3.6.0'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rails'
-  gem 'capistrano-rbenv'
-  gem 'capistrano3-unicorn'
-  gem 'capistrano-rails-console'
-end
 gem 'capistrano-rails'
 
 gem 'faker'
