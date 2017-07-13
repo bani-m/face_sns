@@ -1,5 +1,5 @@
 server '52.199.82.1', user: 'app', roles: %w{app db web}
-set :ssh_options, keys: '/Users/Apple/.ssh/id_rsa'
+set :ssh_options, keys: '/Users/apple/.ssh/id_rsa'
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
