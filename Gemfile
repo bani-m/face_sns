@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "rails-observers"
 gem 'dotenv-rails'
 gem 'unicorn'
 gem 'omniauth'
