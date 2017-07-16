@@ -12,8 +12,7 @@ set :default_env, {
   SECRET_KEY_BASE: "1344bb018e747f12e8109e42765b232aa0ffbadb4fe84d69914a52d27eef1575beffdbffcb314801d67d181304d1bdc9c30c315391697b3133e964b9cb81a022"
 }
 
-AWS_SECRET_ACCESS_KEY:
-# デプロイするアプリケーション名
+
 set :application, 'face_sns'
 
 # cloneするgitのレポジトリ（xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
