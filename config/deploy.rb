@@ -8,7 +8,8 @@ set :default_env, {
   #AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
   AWS_REGION: "ap-northeast-1",
   AWS_ACCESS_KEY_ID: "1ddd",
-  AWS_SECRET_ACCESS_KEY: "3bbbb" 
+  AWS_SECRET_ACCESS_KEY: "3bbbb" ,
+  SECRET_KEY_BASE: "iiiiiiii"
 }
 
 # デプロイするアプリケーション名
