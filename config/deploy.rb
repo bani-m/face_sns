@@ -4,10 +4,8 @@ set :default_env, {
   rbenv_root: "/usr/local/rbenv",
   path: "~/.rbenv/shims:~/.rbenv/bin:$PATH",
   AWS_REGION: ENV['AWS_REGION'],
-  #AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
-  #AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
-  AWS_ACCESS_KEY_ID: 1,
-  AWS_SECRET_ACCESS_KEY: 2 
+  AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
+  AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
 }
 
 # デプロイするアプリケーション名
