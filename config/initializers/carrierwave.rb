@@ -3,8 +3,8 @@ CarrierWave.configure do |config|
       provider:              'AWS',
       #aws_access_key_id:     ENV["AWS_ACCESS_KEY_ID"],
       #aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
-      aws_access_key_id:     1,
-      aws_secret_access_key: 3,
+      aws_access_key_id:     "1",
+      aws_secret_access_key: "3",
       region:                'ap-northeast-1',
       path_style:            true,
   }
