@@ -67,6 +67,6 @@ test:
 #
 production:
   <<: *default
-  database: faceface
+  database: facewhite
   username: face_sns
   password: <%= ENV['FACE_DATABASE_PASSWORD'] %>
