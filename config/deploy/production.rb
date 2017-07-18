@@ -61,4 +61,3 @@ set:ssh_options,keys: '/Users/apple/.ssh/id_rsa'
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
-end
