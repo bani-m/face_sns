@@ -67,6 +67,6 @@ test:
 #
 production:
   <<: *default
-  database: facewhite
+  database: facewhite_production
   username: app
   password: <%= ENV['FACE_DATABASE_PASSWORD'] %>
