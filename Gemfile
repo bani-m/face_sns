@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'dotenv-rails'
-gem 'unicorn'
+#gem 'unicorn'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
@@ -34,8 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave'
 gem 'rmagick'
 # Use Unicorn as the app server
-gem 'unicorn'
-gem 'therubyracer', platforms: :ruby
+#gem 'unicorn'
+#gem 'therubyracer', platforms: :ruby
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :development, :test do
@@ -58,13 +58,13 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 
 group :production, :staging do
-  gem 'dotenv-rails'
+  #gem 'dotenv-rails'
   gem 'unicorn'
   gem 'rails_12factor'
 end
 gem 'devise'
 gem 'therubyracer', platforms: :ruby
-gem 'capistrano-rails'
+#gem 'capistrano-rails'
 
 gem 'faker'
 
@@ -74,10 +74,10 @@ gem 'rails_admin'
 
 gem 'cancan'
 
-gem 'pg', group: :production
-gem 'unicorn', group: :production
+#gem 'pg', group: :production
+#gem 'unicorn', group: :production
 
 group :development do
   gem 'letter_opener_web'
-  gem 'dotenv-rails'
+  #gem 'dotenv-rails'
 end
