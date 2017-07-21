@@ -4,7 +4,6 @@ require 'capistrano/rbenv'
 require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
-#require 'capistrano3/unicorn'
-require 'capistrano/console'
-# taskを記述したファイルを読み込むよう設定。　場所と拡張子を指定。
+require 'capistrano3/unicorn'
+
 Dir.glob('lib/capistrano/tasks/*.rb').each { |r| import r }
