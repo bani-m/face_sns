@@ -56,11 +56,11 @@ gem 'therubyracer', platforms: :ruby
 gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 
-group :production, :staging do
+#group :production, :staging do
   #gem 'dotenv-rails'
   #gem 'unicorn'
   gem 'rails_12factor'
-end
+#end
 gem 'devise'
 #gem 'therubyracer', platforms: :ruby
 #group :development, :test do
@@ -81,7 +81,7 @@ gem 'rails_admin'
 gem 'cancan'
 
 #gem 'pg', group: :production
-#gem 'unicorn', group: :production
+gem 'unicorn', group: :production
 
 group :development do
   gem 'letter_opener_web'
