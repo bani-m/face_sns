@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-group :production do
+
 gem 'dotenv-rails'
 #gem 'unicorn'
 gem 'omniauth'
@@ -38,7 +38,7 @@ gem 'rmagick'
 #gem 'therubyracer', platforms: :ruby
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-#group :development, :test do
+group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry-rails'
@@ -53,15 +53,17 @@ gem 'rmagick'
   gem 'capistrano-rails-console'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-#end
+end
 gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 
-#group :production, :staging do
+group :production, :staging do
   #gem 'dotenv-rails'
-  gem 'unicorn'
+  #gem 'unicorn'
   gem 'rails_12factor'
-#end
+  gem 'web-console', '~> 2.0'
+
+end
 gem 'devise'
 gem 'therubyracer', platforms: :ruby
 #gem 'capistrano-rails'
@@ -77,8 +79,7 @@ gem 'cancan'
 #gem 'pg', group: :production
 #gem 'unicorn', group: :production
 
-
-#group :development do
+group :development do
   gem 'letter_opener_web'
   #gem 'dotenv-rails'
 end
