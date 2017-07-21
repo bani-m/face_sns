@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'dotenv-rails'
-#gem 'unicorn'
+gem 'unicorn'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
@@ -35,10 +35,10 @@ gem 'carrierwave'
 gem 'rmagick'
 # Use Unicorn as the app server
 #gem 'unicorn'
-#gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-#sgroup :development, :test do
+group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry-rails'
@@ -46,14 +46,13 @@ gem 'rmagick'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   gem 'capistrano', '3.6.0'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rails'
+  #gem 'capistrano-bundler'
+  #gem 'capistrano-rails'
   gem 'capistrano-rbenv'
-  gem 'capistrano3-unicorn'
-  gem 'capistrano-rails-console'
+  #gem 'capistrano3-unicorn'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-#end
+end
 gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 
@@ -61,12 +60,17 @@ group :production, :staging do
   #gem 'dotenv-rails'
   #gem 'unicorn'
   gem 'rails_12factor'
-  gem 'web-console', '~> 2.0'
-
 end
 gem 'devise'
-gem 'therubyracer', platforms: :ruby
-#gem 'capistrano-rails'
+#gem 'therubyracer', platforms: :ruby
+#group :development, :test do
+  #gem 'capistrano', '3.6.0'
+  #gem 'capistrano-bundler'
+  #gem 'capistrano-rails'
+  #gem 'capistrano-rbenv'
+  #gem 'capistrano3-unicorn'
+#end
+gem 'capistrano-rails'
 
 gem 'faker'
 
