@@ -68,7 +68,7 @@ gem 'devise'
   #gem 'capistrano-bundler'
   #gem 'capistrano-rails'
   #gem 'capistrano-rbenv'
-  #gem 'capistrano3-unicorn'
+gem 'capistrano3-unicorn'
 #end
 gem 'capistrano-rails'
 
