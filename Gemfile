@@ -38,7 +38,7 @@ gem 'rmagick'
 gem 'therubyracer', platforms: :ruby
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-group :development, :test do
+#group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry-rails'
@@ -52,7 +52,7 @@ group :development, :test do
   #gem 'capistrano3-unicorn'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-end
+#end
 gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 
