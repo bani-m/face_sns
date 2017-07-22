@@ -4,6 +4,6 @@ require 'capistrano/rbenv'
 require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
-require 'capistrano/unicorn'
+require 'capistrano３/unicorn'
 
 Dir.glob('lib/capistrano/tasks/*.rb').each { |r| import r }
