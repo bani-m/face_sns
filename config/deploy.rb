@@ -4,7 +4,7 @@ lock '3.6.0'
 set :application, 'face_sns'
 
 # cloneするgitのレポジトリ（xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
-set :repo_url, 'https://github.com/bani-m/face_sns.git'
+set :repo_url, 'git@github.com:bani-m/face_sns.git'
 
 # deployするブランチ。デフォルトはmasterなのでなくても可。
 set :branch, ENV['BRANCH'] || 'master'
