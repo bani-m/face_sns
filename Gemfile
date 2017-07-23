@@ -58,11 +58,11 @@ gem 'jquery-turbolinks'
 
 group :production, :staging do
   gem 'dotenv-rails'
-　gem 'unicorn'
+  gem 'unicorn'
   gem 'rails_12factor'
 end
 gem 'devise'
-#gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 #group :development, :test do
   #gem 'capistrano', '3.6.0'
   #gem 'capistrano-bundler'
