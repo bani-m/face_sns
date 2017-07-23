@@ -56,11 +56,11 @@ end
 gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 
-#group :production, :staging do
-  #gem 'dotenv-rails'
-　#gem 'unicorn'
-  #gem 'rails_12factor'
-#end
+group :production, :staging do
+  gem 'dotenv-rails'
+　gem 'unicorn'
+  gem 'rails_12factor'
+end
 gem 'devise'
 #gem 'therubyracer', platforms: :ruby
 #group :development, :test do
