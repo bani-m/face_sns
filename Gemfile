@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'dotenv-rails'
+#gem 'dotenv-rails'
 gem 'unicorn'
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -34,7 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave'
 gem 'rmagick'
 # Use Unicorn as the app server
-gem 'unicorn'
+#gem 'unicorn'
 gem 'therubyracer', platforms: :ruby
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
