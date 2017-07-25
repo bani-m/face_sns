@@ -80,7 +80,7 @@ gem 'rails_admin'
 
 gem 'cancan'
 
-
+gem 'letter_opener_web'
 #gem 'pg', group: :production
 #gem 'unicorn', group: :production
 
