@@ -1,11 +1,11 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: 'radiant-atoll-97370.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'http://13.114.98.150' }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
   {
   user_name: ENV['SENDGRID_USERNAME'],
   password: ENV['SENDGRID_PASSWORD'],
-  domain: "heroku.com",
+  domain: "http://13.114.98.150",
   address: "smtp.sendgrid.net",
   port: 587,
   authentication: :plain,
