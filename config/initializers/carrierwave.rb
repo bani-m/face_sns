@@ -12,7 +12,7 @@ CarrierWave.configure do |config|
 
   case Rails.env
     when 'production'
-      config.fog_directory = 'face-sna-pro'
+      config.fog_directory = 'face-sns-pro'
       config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/face-sna-pro'
     when 'development'
       config.fog_directory = 'face-sns-dve'
