@@ -8,7 +8,7 @@ class NoticeMailer < ApplicationMailer
   def sendmail_topic(topic)
     @topic = topic
 
-    mail to: "banbanibai50@gmail.com",
+    mail to: "banibanibani50@gmail.com",
          subject: '【Achieve】ブログが投稿されました'
   end
 end
