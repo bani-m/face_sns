@@ -16,18 +16,18 @@ resources :topics, only: [:index, :new, :edit, :update, :create]
   #end
 
   resources :conversations do
-  resources :messages
+    resources :messages
   end
 
   devise_for :users, controllers: {
-  registrations: "users/registrations",
-  omniauth_callbacks: "users/omniauth_callbacks"
+    registrations: "users/registrations",
+    omniauth_callbacks: "users/omniauth_callbacks"
   }
 
-resources :relationships, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
-resources :users, only: [:index, :show]
-root 'top#index'
+  resources :users, only: [:index, :show]
+  root 'top#index'
 
 #resources :topics do
 #resources :comments
@@ -36,9 +36,9 @@ root 'top#index'
 #post :confirm
 #end
 
-mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-end
+# end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
