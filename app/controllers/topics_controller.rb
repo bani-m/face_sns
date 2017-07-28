@@ -27,18 +27,18 @@ class TopicsController < ApplicationController
   end
 
   def edit
-    @topics = Topic.all
-    @topic = Topic.find(params[:id])
-  end
+   @topics = Topic.all
+   @topic = Topic.find(params[:id])
+ end
 
-  def update
-    @topic = Topic.find(params[:id])
-    if @topic.update(topics_params)
-      redirect_to topics_path, notice: "トピックを更新しました！"
-    else
-      render 'edit'
-    end
-  end
+ def update
+   @topic = Topic.find(params[:id])
+   if @topic.update(topics_params)
+     redirect_to topics_path, notice: "ブログを更新しました！"
+   else
+     render 'edit'
+   end
+ end
 
   def destroy
     @topic = Topic.find(params[:id])
