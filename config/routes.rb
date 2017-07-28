@@ -10,9 +10,9 @@ resources :topics, only: [:index, :new, :create, :edit, :update]
 
 
   resources :comments
-  collection do
-    post :confirm
-  end
+  #collection do
+  #  post :confirm
+  #end
   #resources :topics do
   #end
 
