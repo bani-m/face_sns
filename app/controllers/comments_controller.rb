@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @comment = current_user.comments.build(comment_params)
+    @comment = Comment.find(params[:id])
     @topic = @comment.topic
   end
 
