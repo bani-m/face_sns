@@ -14,6 +14,11 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @comment = current_user.comments.build(comment_params)
+    @topic = @comment.topic
+  end
+
   def destroy
   @comment = Comment.find(params[:id])
   @comment .destroy
