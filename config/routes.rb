@@ -8,12 +8,13 @@ resources :topics, only: [:index, :new, :create, :edit, :update]
   mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
-  resources :topics do
+
   resources :comments
   collection do
     post :confirm
   end
-  end
+  #resources :topics do
+  #end
 
   resources :conversations do
   resources :messages
