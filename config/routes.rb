@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 #resources :topics, only: [:index, :new, :create]
-resources :topics
+resources :topics do
 
   get 'notifications/index'
 
