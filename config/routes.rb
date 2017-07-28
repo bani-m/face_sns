@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     #collection do
     #  post :confirm
     #end
+    resources :comment2s
   end
 
   get 'notifications/index'
