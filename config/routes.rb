@@ -31,15 +31,15 @@ resources :users, only: [:index, :show]
 root 'top#index'
 
 #resources :topics do
-#resources :comments
+#  resources :comments
 
-#collection do
-#post :confirm
+#  collection do
+#   post :confirm
 #end
 
 mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-end
+#end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
