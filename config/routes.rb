@@ -5,15 +5,15 @@ resources :topics, only: [:index, :new, :edit, :update, :create]
   get 'notifications/index'
 
   if Rails.env.development?
-  mount LetterOpenerWeb::Engine, at: "/letter_opener"
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
-  resources :topics do
+  #resources :topics do
   resources :comments
   collection do
     post :confirm
   end
-  end
+  #end
 
   resources :conversations do
   resources :messages
@@ -28,12 +28,13 @@ resources :relationships, only: [:create, :destroy]
 
 resources :users, only: [:index, :show]
 root 'top#index'
-resources :topics do
-resources :comments
 
-collection do
-post :confirm
-end
+#resources :topics do
+#resources :comments
+
+#collection do
+#post :confirm
+#end
 
 mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
