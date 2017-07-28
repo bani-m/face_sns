@@ -15,7 +15,7 @@
     <div id="comments_area">
       <%= render partial: 'comments/index', locals: { comments: @comments, topic: @topic } %>
     </div>
-    <%= render partial: 'comments/form', locals: { comment: @comment, topic: @topic } %>
+    <%= render partial: 'comment2s/form', locals: { comment: @comment, topic: @topic } %>
     <% if current_user.id == @topic.user_id %>
       <%= link_to '編集', edit_topic_path(@topic) %> |
     <% end %>

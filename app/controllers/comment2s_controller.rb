@@ -4,7 +4,7 @@ class Comment2sController < ApplicationController
   # GET /comment2s
   # GET /comment2s.json
   def index
-    @topic = Topic.find(params[:id])
+    #@topic = Topic.find(params[:id])
     @comment2s = Comment2.all
   end
 

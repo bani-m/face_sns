@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :comment2s
   resources :topics do
     resources :comments
     #collection do
     #  post :confirm
     #end
-    resources :comment2s
   end
 
   get 'notifications/index'
