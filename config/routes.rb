@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-#resources :topics, only: [:index, :new, :create]
-resources :topics do
+resources :topics, only: [:index, :new, :edit, :update, :create]
 
   get 'notifications/index'
 
@@ -9,11 +8,12 @@ resources :topics do
   mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
+  resources :topics do
   resources :comments
   collection do
     post :confirm
   end
-
+  end
 
   resources :conversations do
   resources :messages
