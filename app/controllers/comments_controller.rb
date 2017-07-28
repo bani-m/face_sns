@@ -19,9 +19,18 @@ class CommentsController < ApplicationController
     @topic = @comment.topic
   end
 
+  def update
+    @comment = Comment.find(params[:id])
+    if @comment.update(comment_params)
+      redirect_to comments_path, notice: "トピックを更新しました！"
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
   @comment = Comment.find(params[:id])
-  @comment .destroy
+  @comment.destroy
    flash[:notice] = "コメントを削除しました"
   end
 
