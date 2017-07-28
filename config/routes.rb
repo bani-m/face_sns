@@ -29,12 +29,13 @@ resources :relationships, only: [:create, :destroy]
 
 resources :users, only: [:index, :show]
 root 'top#index'
-resources :topics do
-resources :comments
 
-collection do
-post :confirm
-end
+#resources :topics do
+#resources :comments
+
+#collection do
+#post :confirm
+#end
 
 mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
