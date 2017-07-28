@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-resources :topics, only: [:index, :new, :create, :edit, :update]
+resources :topics, only: [:index, :new, :create, :edit, :update] do
 
   get 'notifications/index'
 
@@ -17,7 +17,7 @@ resources :topics, only: [:index, :new, :create, :edit, :update]
   #end
 
   resources :conversations do
-  resources :messages
+    resources :messages
   end
 
   devise_for :users, controllers: {
