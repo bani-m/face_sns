@@ -24,7 +24,6 @@ get 'notifications/index'
   }
 
 resources :relationships, only: [:create, :destroy]
-resources :comments, only: [:index, :new, :create, :edit, :update]
 resources :users, only: [:index, :show]
 root 'top#index'
 
