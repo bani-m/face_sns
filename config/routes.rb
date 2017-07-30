@@ -1,6 +1,6 @@
 
 Rails.application.routes.draw do
-resources :topics, only: [:index, :new, :create, :edit, :update]
+resources :topics, only: [:index, :new, :create,]
 
 
   if Rails.env.development?
