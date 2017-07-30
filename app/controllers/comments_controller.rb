@@ -22,7 +22,8 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       redirect_to comment_path, notice: "トピックを更新しました！"
     else
-      render :comments/edit
+      render :partial => 'comments/edit'
+
     end
   end
 
