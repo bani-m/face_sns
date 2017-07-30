@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :set_comment, only: [:edit, :destroy, :update,:show]
   # コメントを保存、投稿するためのアクションです。
   def create
     # Blogをパラメータの値から探し出し,Blogに紐づくcommentsとしてbuildします。
@@ -34,8 +35,11 @@ class CommentsController < ApplicationController
   end
 
   private
-    # ストロングパラメーター
     def comment_params
       params.require(:comment).permit(:topic_id, :content)
+    end
+    def set_comment
+      #ブログのどのコメントの情報かを取得する
+      @comment=Comment.find(params[:id])
     end
 end
