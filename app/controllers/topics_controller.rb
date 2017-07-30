@@ -30,7 +30,6 @@ class TopicsController < ApplicationController
  end
 
  def update
-   @topic = Topic.find(params[:id])
    if @topic.update(topics_params)
      redirect_to topics_path, notice: "ブログを更新しました！"
    else
