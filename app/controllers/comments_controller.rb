@@ -17,6 +17,7 @@ class CommentsController < ApplicationController
   def edit
     @comment = Comment.find(params[:id])
     @topic = @comment.topic
+    redirect_to edit_comment_path
   end
 
   def update
