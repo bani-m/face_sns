@@ -27,8 +27,6 @@ class TopicsController < ApplicationController
   end
 
   def edit
-   @topics = Topic.all
-   @topic = Topic.find(params[:id])
  end
 
  def update
