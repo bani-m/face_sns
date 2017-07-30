@@ -1,12 +1,12 @@
 
 Rails.application.routes.draw do
 resources :topics, only: [:index, :new, :create, :edit, :update]
-  get 'notifications/index'
+
 
   if Rails.env.development?
   mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
-
+get 'notifications/index'
   resources :topics do
   resources :comments
   collection do
