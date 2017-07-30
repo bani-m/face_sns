@@ -16,16 +16,21 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    #どのブログの情報かを取得。
+    @topic = @comment.topic
+  end
+  def update
+    #binding.pry
+    if @comment.update(comment_params)
+      redirect_to topic_path(@comment.topic), notice: "コメントを更新しました"
+    else
+      render 'edit'
+    end
   end
 
-  def update
-    @comment = Comment.find(params[:id])
-    if @comment.update(comment_params)
-      redirect_to comment_path, notice: "トピックを更新しました！"
-    else
-      render :partial => 'comments/edit'
-
-    end
+  def show
+    @topic = @comment.blog
+    render 'index'
   end
 
   def destroy
