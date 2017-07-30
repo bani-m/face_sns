@@ -25,7 +25,7 @@ resources :topics, only: [:index, :new, :create, :edit, :update]
   }
 
 resources :relationships, only: [:create, :destroy]
-resources :comments, only: [:index, :edit, :show]
+resources :comments, only: [:index, :new, :create, :edit, :update]
 resources :users, only: [:index, :show]
 root 'top#index'
 resources :topics do
