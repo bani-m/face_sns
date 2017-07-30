@@ -1,7 +1,7 @@
 
 Rails.application.routes.draw do
 resources :topics, only: [:index, :new, :create, :edit, :update]
-
+　get '//',
   get 'notifications/index'
 
   if Rails.env.development?
@@ -28,12 +28,7 @@ resources :relationships, only: [:create, :destroy]
 resources :comments, only: [:index, :new, :create, :edit, :update]
 resources :users, only: [:index, :show]
 root 'top#index'
-resources :topics do
-resources :comments
 
-collection do
-post :confirm
-end
 end
 
 
