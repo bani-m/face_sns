@@ -1,42 +1,37 @@
-
 Rails.application.routes.draw do
-resources :topics, only: [:index, :new, :create,]
 
+  get 'notifications/index'
 
-  if Rails.env.development?
-  mount LetterOpenerWeb::Engine, at: "/letter_opener"
-  end
-get 'notifications/index'
-  resources :topics do
-  resources :comments
-  collection do
-    post :confirm
-  end
-  end
-
-  resources :conversations do
-  resources :messages
-  end
-
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {
-  registrations: "users/registrations",
-  omniauth_callbacks: "users/omniauth_callbacks"
+    registrations: "users/registrations",
+    omniauth_callbacks: "users/omniauth_callbacks"
   }
 
-resources :relationships, only: [:create, :destroy]
-resources :users, only: [:index, :show]
-root 'top#index'
+
+  #rubyのコーディングルールとしてコントローラ名の複数形で記述すること
+  # resources :コントローラ名s
+  #resources :contacts
+  #=>resouresを定義することでget XXXの記載は不要となる
+  resources :topics do
+    resources :comments
+    post :confirm, on: :collection
+  end
+
+  resources :users, only: [:index, :show]
+  resources :relationships, only: [:create, :destroy]
+
+  resources :conversations do
+    resources :messages
+  end
 
 
+  #root 'コントローラ名#アクション名'とすることでルート・ディレクトリで
+  #どのアクションを実行するかを設定することができます。
+  root 'top#index'
 
-
-
-mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-
-
-
-
-
-
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 
 end
