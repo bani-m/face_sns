@@ -28,7 +28,7 @@ resources :comments, only: [:index, :new, :create, :edit, :update]
 resources :users, only: [:index, :show]
 root 'top#index'
 
-end
+
 
 
 
