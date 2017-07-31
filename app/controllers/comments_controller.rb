@@ -35,9 +35,11 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
-    flash.now[:message] = "コメントを削除しました！"
-    #renderで非同期通信となる
-    render 'index'
+    respond_to do |format|
+        format.html {redirect_to topics_path(@topic)}
+          flash.now[:notice] = "コメントが削除されました!"
+        format.js { render :index }
+    end
   end
 
   private
