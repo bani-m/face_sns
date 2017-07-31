@@ -1,3 +1,2 @@
 +$("#comments_area").html("<%= j(render 'comments/index', { comments: @comment.topic.comments, topic: @comment.topic }) %>")
- +$("#delete_comment").html("<%=j flash[:notice] = "コメントを削除しました。"%>")
  +$(':text').val('')
