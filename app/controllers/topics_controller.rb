@@ -15,7 +15,6 @@ class TopicsController < ApplicationController
   def show
     @comment = @topic.comments.build
     @comments = @topic.comments
-    Notification.find(params[:notification_id]).update(read: true) if params[:notification_id]
    end
 
   def new
@@ -31,7 +30,7 @@ class TopicsController < ApplicationController
 
  def update
    if @topic.update(topics_params)
-     redirect_to topics_path, notice: "ブログを更新しました！"
+     redirect_to topics_path, notice: "トピックを更新しました！"
    else
      render 'edit'
    end
