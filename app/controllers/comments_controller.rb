@@ -34,17 +34,11 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-      @comment.destroy
-
-      respond_to do |format|
-        if @comment.save
-          format.html { redirect_to topic_path(@topic), notice: 'コメントを削除しました。' }
-          format.js { render :index }
-        else
-          format.html { render :new }
-        end
-      end
-    end
+    @comment.destroy
+    flash.now[:message] = "コメントを削除しました！"
+    #renderで非同期通信となる
+    render 'index'
+  end
 
   private
     def comment_params
