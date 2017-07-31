@@ -74,6 +74,7 @@ ja:
       almost_x_years:
         one: 1年弱
         other: "%{count}年弱"
+        title: "タイトル"
       half_a_minute: 30秒前後
       less_than_x_minutes:
         one: 1分以内
