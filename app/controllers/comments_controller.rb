@@ -34,13 +34,18 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment.destroy
-    respond_to do |format|
-        format.html {redirect_to topics_path(@topic)}
-          flash.now[:notice] = "コメントが削除されました!"
-        format.js { render :index }
+      @comment = Comment.find(params[:id])
+      @comment.destroy
+
+      respond_to do |format|
+        if @comment.save
+          format.html { redirect_to blog_path(@topic), notice: 'コメントを削除しました。' }
+          format.js { render :index }
+        else
+          format.html { render :new }
+        end
+      end
     end
-  end
 
   private
     def comment_params
