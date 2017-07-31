@@ -32,12 +32,13 @@ class CommentsController < ApplicationController
     @topic = @comment.topic
     render 'index'
   end
-
+  #_をつけたファイルは共通部品。呼び出す時はrenderを使う
   def destroy
     @comment.destroy
-    flash[:notice] = "Successfully destroyed comment."
-    @comments = Comment.all
-   end
+    flash.now[:message] = "コメントを削除しました！"
+    #renderで非同期通信となる
+    render 'index'
+  end
 
   private
     def comment_params
