@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
  before_action :authenticate_user!
 
-  before_action :set_topic, only: [:show, :edit, :destroy]
+  before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def confirm
     @topic = Topic.new(topicss_params)
