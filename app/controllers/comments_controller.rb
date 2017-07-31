@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
   end
 
   def show
-    @topic = @comment.blog
+    @topic = @comment.topic
     render 'index'
   end
 
