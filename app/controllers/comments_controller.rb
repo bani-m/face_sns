@@ -35,10 +35,9 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
-    flash.now[:message] = "コメントを削除しました！"
-    #renderで非同期通信となる
-    render 'index'
-  end
+    flash[:notice] = "Successfully destroyed comment."
+    @comments = Comment.all
+   end
 
   private
     def comment_params
