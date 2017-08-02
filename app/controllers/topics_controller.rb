@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def confirm
-    @topic = Topic.new(topicss_params)
+    @topic = Topic.new(topics_params)
     render :new if @topic.invalid?
   end
 
@@ -44,7 +44,6 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(topics_params)
     @topic.user_id = current_user.id
-    @topic.user_name = current_user.name
     if @topic.save
       redirect_to topics_path, notice: "トピックを作成しました！"
       NoticeMailer.sendmail_topic(@topic).deliver
