@@ -7,6 +7,7 @@
     <div class="row">
     <%= link_to topic_path(topic) do %>
     <h4><strong><%= topic.title %></strong></h4>
+    <%= topic.user.name %>
   <% end %>
         <p><%= topic.content %></p>
         <%= link_to "編集", edit_topic_path(topic.id), class: 'btn btn-default btn-sm btn-success' %>
