@@ -27,6 +27,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
+  # S3 strage
 
   # Create different versions of your uploaded files:
   # version :thumb do
