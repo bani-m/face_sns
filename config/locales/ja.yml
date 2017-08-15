@@ -162,11 +162,11 @@ ja:
         other: "%{model}に%{count}個のエラーが発生しました"
   helpers:
     select:
-      prompt: 選択してください
+      prompt: "選択してください"
     submit:
-      create: 登録する
-      submit: 保存する
-      update: 更新する
+      create: "登録する"
+      submit: "保存する"
+      update: "更新する"
   number:
     currency:
       format:
@@ -225,4 +225,3 @@ ja:
       long: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
       short: "%y/%m/%d %H:%M"
     pm: 午後
-　　　 
