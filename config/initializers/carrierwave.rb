@@ -14,8 +14,5 @@ CarrierWave.configure do |config|
     when 'production'
       config.fog_directory = 'faceblue'
       config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/faceblue'
-    when 'development'
-      config.fog_directory = 'face-sns-dve'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/face-sns-dve'
   end
  end
