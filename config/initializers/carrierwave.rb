@@ -11,8 +11,11 @@ CarrierWave.configure do |config|
   config.fog_attributes = {'Cache-Control' => 'public, max-age=86400'}
 
   case Rails.env
-    when 'production'
+    when 'development'
       config.fog_directory = 'bluenoworld'
       config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bluenoworld'
+    when 'production'
+      config.fog_directory = 'develop-face'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/develop-face'
   end
  end
