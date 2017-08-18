@@ -37,7 +37,7 @@ header li {
 header ul:after {
   content: "";
   display: block;
-  blue: both;
+  clear: both;
 }
 
 .main-header {
@@ -98,4 +98,8 @@ html {
 
 body {
   text-align: center;
+}
+
+strong {
+  color: blue;
 }
