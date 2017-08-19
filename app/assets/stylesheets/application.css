@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+ a.dropdown-toggle{
+   padding: 5px 0px 0px 5px;
+ }
