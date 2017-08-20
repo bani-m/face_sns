@@ -29,7 +29,7 @@ def create
   if @message.save
   redirect_to conversation_messages_path(@conversation)
   else
-  redirect_to new_conversation_message_path
+  redirect_to conversation_message_path
   end
 end
 private
