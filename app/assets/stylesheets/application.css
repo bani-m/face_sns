@@ -14,9 +14,17 @@
  *= require_self
  */
 a.dropdown-toggle{
-  padding:10px 15px;
+  padding:15px 15px;
 }
 
 a{
-  padding:10px 15px;
+  padding:15px 15px;
+}
+
+li.dropdown{
+  padding:15px 15px;
+}
+
+li{
+  padding:15px 15px;
 }
