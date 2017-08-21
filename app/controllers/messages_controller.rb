@@ -29,8 +29,8 @@ class MessagesController < ApplicationController
     end
   end
 
-  # @message = @conversation.messages.build
-# end
+  @message = @conversation.messages.build
+end
 
 def create
   if @message.save
