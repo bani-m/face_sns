@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= form_for(@@message) do |f| %>
+<%= form_for(@message) do |f| %>
   <% if @@message.errors.any? %>
     <div id="error_explanation">
       <h2><%= @@message.errors.count %>件のエラーがあります。</h2>
