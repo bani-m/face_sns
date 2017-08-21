@@ -3,13 +3,6 @@ class MessagesController < ApplicationController
     @conversation = Conversation.find(params[:conversation_id])
   end
 
-  def new
-      if params[:back]
-    @message = Message.new(params[:conversation_id])
-    else
-      @message = Message.new
-    end
-  end
 
   def index
   @messages = @conversation.messages
