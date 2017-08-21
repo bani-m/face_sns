@@ -30,8 +30,7 @@ def create
   if @message.save
     redirect_to conversation_messages_path(@conversation)
   else
-    render 'index'  
-  end
+    redirect_to conversation_messages_path(@conversation)
 end
 
 
