@@ -4,8 +4,8 @@ class MessagesController < ApplicationController
   end
 
   def new
-    if params[:back]
-      @message = Message.new(messages_params)
+      if params[:back]
+    @message = Message.new(params[:conversation_id])
     else
       @message = Message.new
     end
@@ -36,8 +36,8 @@ def create
   @message = @conversation.messages.build(message_params)
   if @message.save
   redirect_to conversation_messages_path(@conversation), notice: "メッセージを作成しました！"
-  else
-   render 'new'
+else
+  redirect_to root_path
   end
 end
 
