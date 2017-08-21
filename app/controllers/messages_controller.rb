@@ -29,7 +29,7 @@ def create
   if @message.save
   redirect_to conversation_messages_path(@conversation), notice: "メッセージを作成しました！"
 　else
-  render 'new'
+  render "index"
   end
 end
 
