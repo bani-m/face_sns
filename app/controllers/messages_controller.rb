@@ -45,14 +45,14 @@ end
    if @messages.last.user_id != current_user.id
     @messages.last.read = true
    end
-   end
+end
   render :index and return
    end
-   end
+end
 
 private
-def message_params
-params.require(:message).permit(:body, :user_id)
-end
+　　def message_params
+　　　params.require(:message).permit(:body, :user_id)
+　　end
 
 end
