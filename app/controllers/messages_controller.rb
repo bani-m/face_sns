@@ -44,9 +44,10 @@ end
    if @messages.last.user_id != current_user.id
     @messages.last.read = true
    end
-    render :index
-end
-end
+   end
+  render :index
+   end
+   end
 
 private
 def message_params
