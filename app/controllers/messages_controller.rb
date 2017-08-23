@@ -33,6 +33,7 @@ def create
     new_conversation_message
 end
 
+end
 
 private
   def message_params
