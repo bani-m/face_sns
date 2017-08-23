@@ -30,7 +30,7 @@ def create
   if @message.save
     redirect_to conversation_messages_path(@conversation)
   else
-    render 'new_conversation_message'
+    redirect_to new_conversation_message_path
 end
 
 end
