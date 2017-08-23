@@ -45,7 +45,7 @@ end
     @messages.last.read = true
    end
    end
-  render :index
+  render :index and return
    end
    end
 
