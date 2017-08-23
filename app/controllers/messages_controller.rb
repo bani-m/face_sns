@@ -44,7 +44,7 @@ end
    if @messages.last.user_id != current_user.id
   @messages.last.read = true
   end
-end
+　end
 render :index
 end
 end
